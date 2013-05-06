@@ -50,9 +50,8 @@ PID descriptions
 Steering wheel sensor data is transmitted every 10ms. Data bits:
 
 - D0-D1: Steering wheel position with 0.5 degree accuracy, center point ``(0.0 degrees) == D0:0x10, D1:0x00``. ``(((D0 * 256) + D1) - 4096) / 2 == steering wheel position in degrees)``. Negative angle - right, positive angle left.
-- D2: TODO
-- D3: TODO
-- D4: TODO
+- D2-D3: possibly represents rate of change, defaults to ``D2:0x10, D3:0x00`` when steering weel is at rest.
+- D4: counter, but only high-nibble bits (4-7) are used.
 - D5: ``0x00`` (const?)
 - D6: ``0x00`` (const?)
 - D7: TODO
