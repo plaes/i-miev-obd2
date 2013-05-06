@@ -34,11 +34,28 @@ Periodically occurring PIDs:
   424, 6E1, 6E2, 6E3, 6E4
 - 20ms (50 fps):
   119, 149, 156, 200, 208, 210, 212, 215, 231, 300, 308, 325, 346, 418
+- 10ms (100fps):
+  236_, 285, 288, 373
 
 .. [#note_testmode] Possibly only sent in debug mode.
 
 PID descriptions
 ~~~~~~~~~~~~~~~~
+
+.. _236:
+
+236 - Steering wheel sensor
+---------------------------
+
+Steering wheel sensor data is transmitted every 10ms. Data bits:
+
+- D0-D1: Steering wheel position with 0.5 degree accuracy, center point ``(0.0 degrees) == D0:0x10, D1:0x00``. ``(((D0 * 256) + D1) - 4096) / 2 == steering wheel position in degrees)``. Negative angle - right, positive angle left.
+- D2: TODO
+- D3: TODO
+- D4: TODO
+- D5: ``0x00`` (const?)
+- D6: ``0x00`` (const?)
+- D7: TODO
 
 .. _412:
 
