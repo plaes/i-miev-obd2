@@ -33,7 +33,7 @@ Periodically occurring PIDs:
 - 40ms (25 fps):
   424, 6E1, 6E2, 6E3, 6E4
 - 20ms (50 fps):
-  119, 149, 156, 200, 208_, 210, 212, 215, 231, 300, 308, 325, 346, 418
+  119, 149, 156, 200, 208_, 210, 212, 215, 231_, 300, 308, 325, 346, 418
 - 10ms (100fps):
   236_, 285, 288, 373
 
@@ -45,6 +45,7 @@ PID descriptions
 .. _208:
 
 208 - Brake pedal
+-----------------
 
 Break pedal sensor data is transmitted every 20ms. Data bits seem
 to be following:
@@ -56,6 +57,14 @@ to be following:
 -D5: `0x00` (const?)
 -D6: `0xc0` (const?)
 -D7: `0x00` (const?)
+
+.. _231:
+
+231 - Brake pedal switch sensor
+-------------------------------
+-D0-D3: `0x00` (const?)
+-D4: `0x00` if brake is free, `0x02` if brake pedal is pressed
+-D5-D7: `0x00` (const?)
 
 .. _236:
 

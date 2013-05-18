@@ -115,3 +115,5 @@ Gearbox positions (285):
 - C: 07:d2:14:00:8e:fe:0e:10
 
 When drive mode is enabled D1 can be d0 -> d9
+
+210 - possible gas pedal - D3
