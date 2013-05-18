@@ -102,3 +102,16 @@ Cooling fan (771, 772):
   D0=0x04, D1=0x70, D2=0x13, D3=0x07, D4=0x03, D5=0xff, D6=0xff, D7=0xff
   D0=0x04, D1=0x70, D2=0x13, D3=0x01, D4=0xff, D5=0xff, D6=0xff, D7=0xff
   D0=0x04, D1=0x70, D2=0x13, D3=0x01, D4=0xff, D5=0xff, D6=0xff, D7=0xff
+
+Gearbox positions (285):
+------------------------
+* RECV:
+
+- P: 07:d0:14:00:8e:fe:0c:10
+- R: 07:d0:14:00:8e:fe:0e:30
+- N: 07:d0:14:00:8e:fe:0c:10
+- D: 07:d0:14:00:8e:fe:0e:10
+- B: 07:d1:14:00:8e:fe:0e:10
+- C: 07:d2:14:00:8e:fe:0e:10
+
+When drive mode is enabled D1 can be d0 -> d9
