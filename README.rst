@@ -50,21 +50,22 @@ PID descriptions
 Break pedal sensor data is transmitted every 20ms. Data bits seem
 to be following:
 
--D0: `0x00` (const?)
--D1: `0x20` (const?)
--D2-D3: pedal position, 60:00 is zero position, max seems to be around 61:bf
--D4: `0xc0` (const?)
--D5: `0x00` (const?)
--D6: `0xc0` (const?)
--D7: `0x00` (const?)
+- D0: ``0x00`` (const?)
+- D1: ``0x20`` (const?)
+- D2-D3: pedal position, ``60:00`` is zero position, max seems to be around ``61:bf``
+- D4: ``0xc0`` (const?)
+- D5: ``0x00`` (const?)
+- D6: ``0xc0`` (const?)
+- D7: ``0x00`` (const?)
 
 .. _231:
 
 231 - Brake pedal switch sensor
 -------------------------------
--D0-D3: `0x00` (const?)
--D4: `0x00` if brake is free, `0x02` if brake pedal is pressed
--D5-D7: `0x00` (const?)
+
+- D0-D3: ``0x00`` (const?)
+- D4: ``0x00`` if brake is free, ``0x02`` if brake pedal is pressed
+- D5-D7: ``0x00`` (const?)
 
 .. _236:
 
@@ -74,7 +75,7 @@ to be following:
 Steering wheel sensor data is transmitted every 10ms. Data bits:
 
 - D0-D1: Steering wheel position with 0.5 degree accuracy, center point ``(0.0 degrees) = D0:0x10, D1:0x00``. ``(((D0 * 256) + D1) - 4096) / 2 = steering wheel position in degrees)``. Negative angle - right, positive angle left.
-- D2-D3: possibly represents rate of change, defaults to ``D2:0x10, D3:0x00`` when steering weel is at rest.
+- D2-D3: possibly represents rate of change, defaults to ``D2:0x10, D3:0x00`` when steering wheel is at rest.
 - D4: counter, but only high-nibble bits (4-7) are used, ``D4[0:3]=0``
 - D5: ``0x00`` (const?)
 - D6: ``0x00`` (const?)
